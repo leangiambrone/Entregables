@@ -1,0 +1,55 @@
+USE ventas_tech_db
+
+-- Consulta 1: Total facturado, cantidad de pedidos y ticket promedio, agrupados por mes
+SELECT MONTH(fecha_venta) AS mes_venta,
+	SUM(cantidad * precio_unitario) AS total_facturado,
+	COUNT (id_venta) AS cantidad_pedidos,
+	AVG (cantidad * precio_unitario) AS ticket_promedio
+	FROM ventas
+	GROUP BY MONTH(fecha_venta);
+
+-- Consulta 2: Top 5 de productos por total facturado, mostrando las unidades vendidas y el total generado
+SELECT TOP 5 id_producto,
+	SUM(cantidad) AS unidades_vendidas,
+	SUM(cantidad * precio_unitario) AS total_facturado
+	FROM ventas
+	GROUP BY id_producto
+	ORDER BY SUM(cantidad * precio_unitario) DESC
+
+SELECT * FROM ventas
+-- Consulta 3: Clientes que hayan realizado más de un pedido, mostrando la cantidad de pedidos y el total gastado
+SELECT id_cliente,
+	COUNT(id_cliente) AS cantidad_pedidos,
+	SUM(cantidad * precio_unitario) AS total_gastado
+	FROM ventas
+	GROUP BY id_cliente
+	HAVING COUNT(*) > 1
+	ORDER BY (total_gastado) DESC
+
+-- Consulta 4: Meses por encima/por debajo del promedio
+SELECT
+	MONTH(fecha_venta) AS Mes,
+	SUM(cantidad * precio_unitario) AS Total_Facturado,
+CASE
+WHEN SUM(cantidad * precio_unitario) >
+	(
+	SELECT AVG(Total_Mes)
+	FROM
+	(
+	SELECT
+	SUM(cantidad * precio_unitario) AS Total_Mes
+	FROM ventas
+	GROUP BY MONTH(fecha_venta)
+	) AS Promedios
+)
+THEN 'Por encima'
+ELSE 'Por debajo'
+END AS Comparacion
+FROM ventas
+GROUP BY MONTH(fecha_venta)
+ORDER BY Mes;
+
+/*
+.El producto más vendido es el 2, siendo casi el 45% de las unidades vendidas.
+.El 1 es el producto que más facturación generó, más del doble que el segundo.
+.Ningún cliente realizó una sola compra, todos volvieron a comprar.*/
