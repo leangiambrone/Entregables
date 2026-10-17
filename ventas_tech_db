@@ -16,7 +16,6 @@ SELECT TOP 5 id_producto,
 	GROUP BY id_producto
 	ORDER BY SUM(cantidad * precio_unitario) DESC
 
-SELECT * FROM ventas
 -- Consulta 3: Clientes que hayan realizado más de un pedido, mostrando la cantidad de pedidos y el total gastado
 SELECT id_cliente,
 	COUNT(id_cliente) AS cantidad_pedidos,
