@@ -6,6 +6,7 @@ Proyecto desarrollado como parte de la formación en Data Analytics, utilizando 
 RetailPro simula el entorno de una empresa de comercialización de productos de tecnología, permitiendo aplicar técnicas de análisis de datos sobre información de clientes, productos, categorías y ventas.
 
 . Objetivos del Proyecto:
+
 -Diseñar una base de datos relacional normalizada.
 -Implementar consultas SQL orientadas al negocio.
 -Analizar el comportamiento de ventas.
