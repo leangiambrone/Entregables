@@ -14,18 +14,19 @@ RetailPro simula el entorno de una empresa de comercialización de productos de 
 -Generar una base sólida para futuros dashboards en Power BI.
 
 . Modelo de Datos .
+
 La base de datos está compuesta por cuatro tablas principales:
 
-Categorias
+-Categorias
 Contiene la clasificación de los productos comercializados.
 
-Productos
+-Productos
 Catálogo de productos tecnológicos con sus precios y categoría asociada.
 
-Clientes
+-Clientes
 Información de los clientes registrados en la empresa.
 
-Ventas
+-Ventas
 Registro histórico de transacciones realizadas, incluyendo productos vendidos, cantidades y precios.
 
 . Tecnologías Utilizadas .
