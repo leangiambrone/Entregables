@@ -29,6 +29,7 @@ Información de los clientes registrados en la empresa.
 -Ventas:
 Registro histórico de transacciones realizadas, incluyendo productos vendidos, cantidades y precios.
 
+
 . Tecnologías Utilizadas .
 
 -SQL Server Management Studio
