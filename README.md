@@ -38,16 +38,27 @@ Registro histórico de transacciones realizadas, incluyendo productos vendidos, 
 . Estructura del Repositorio .
 
 │-Entregables/
+
 │
+
 ├── Modulo_3/
+
 │   └── Ventas_Tech_DB.sql
+
 │
+
 ├── Modulo_4/
+
 │   └── m4_consultas_negocio.sql
+
 │
+
 ├── Modulo_5/
+
 │   └── m5_consultas_joins.sql
+
 │
+
 └── README.md
 
 
@@ -63,6 +74,7 @@ Conectarse a una instancia de SQL Server 2022.
 Ejecutar primero el script de creación de la base de datos ubicado en el repositorio.
 
 Este script genera:
+
 -Tablas
 -Relaciones
 -Claves primarias
@@ -70,6 +82,7 @@ Este script genera:
 -Datos de ejemplo
 
 4. Ejecutar las consultas
+
 Una vez creada la base de datos:
 
 -Seleccionar la base RetailPro.
