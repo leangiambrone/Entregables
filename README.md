@@ -40,25 +40,18 @@ Registro histórico de transacciones realizadas, incluyendo productos vendidos, 
 │-Entregables/
 
 │
-
 ├── Modulo_3/
-
 │   └── Ventas_Tech_DB.sql
 
 │
-
 ├── Modulo_4/
-
 │   └── m4_consultas_negocio.sql
 
 │
-
 ├── Modulo_5/
-
 │   └── m5_consultas_joins.sql
 
 │
-
 └── README.md
 
 
